@@ -3,6 +3,7 @@
 import { Route, Switch } from "react-router-dom";
 import MainPage from './views/MainPage';
 import DesolvePage from './views/DesolveEffect/DesolveEffect';
+import SlidePage from './views/SlideEffect/SlideEffect';
 
 function App() {
   return (

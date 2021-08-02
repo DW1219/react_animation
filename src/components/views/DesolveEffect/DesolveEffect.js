@@ -2,10 +2,6 @@ import React, { useState, useEffect } from 'react'
 import { useTransition, animated } from '@react-spring/web'
 import './DesolveEffect.css'
 
-
-
-function DesolveEffect() {
-
     const pages = [
         'https://wallpapercave.com/wp/wp6755140.jpg',
         'https://wallpapercave.com/wp/wp4088744.jpg',
@@ -21,6 +17,9 @@ function DesolveEffect() {
     //'reserve/bnW1TuTV2YGcoh1HyWNQ_IMG_0207.JPG',
     //'photo-1540206395-68808572332f',
     ]
+
+function DesolveEffect() {
+
 
     const [Index, setIndex] = useState(0)
 
