@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { useTransition, animated } from '@react-spring/web'
 import './DesolveEffect.css'
+import img01 from "../../resources/main_img01.jpg";
+import img04 from "../../resources/main_img04.jpg";
 
-    const pages = [
+
+    const pagesee = [
         'https://wallpapercave.com/wp/wp6755140.jpg',
         'https://wallpapercave.com/wp/wp4088744.jpg',
         'https://wallpapercave.com/wp/wp6737838.jpg',
@@ -18,6 +21,16 @@ import './DesolveEffect.css'
     //'photo-1540206395-68808572332f',
     ]
 
+const pages = [
+  '../../resources/main_img01.jpg',
+  '../../resources/main_img04.jpg',
+]
+
+const pageURL = []
+pageURL.push(img01)
+pageURL.push(img04)
+console.log(pageURL);
+
 function DesolveEffect() {
 
 
@@ -32,7 +45,7 @@ function DesolveEffect() {
     })
 
     useEffect(() => {
-      const t = setInterval(() => setIndex(state => (state + 1) % pages.length), 4000)
+      const t = setInterval(() => setIndex(state => (state + 1) % pageURL.length), 4000)
       return () => clearTimeout(t)
     }, [])
 
@@ -44,7 +57,7 @@ function DesolveEffect() {
           className="bg"
           style={{
             ...style,
-            backgroundImage: `url(${pages[i]})`,
+            backgroundImage: `url(${pageURL[i]})`,
           }}
         />
       ))}
